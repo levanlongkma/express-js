@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>   
+    <!-- Latest compiled and minified CSS & JS -->
+    <link rel="stylesheet" media="screen" href="//netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style-login.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    
+</head>
+<body>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-offset-5 col-md-5">
+                <form action="/login" method="POST">
+                    <% if(message.length > 0 ) { %>                       
+                        <div class="alert alert-danger">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                            <strong>Lỗi!</strong> <%= message %>
+                        </div>                       
+                    <% } %>    
+                    <div class="form-login">
+                        <h4>Đăng nhập</h4>
+                        <input type="email" id="email" required class="form-control input-sm chat-input" name="email" placeholder="Email" />
+                        </br>
+                        <input type="password" id="userPassword" class="form-control input-sm chat-input" name="password" placeholder="password" />
+                        </br>
+                        <div class="wrapper">
+                            <span class="group-btn">                                    
+                                <button type="submit" class="btn btn-primary">Login</button>                                
+                            </span>
+                        </div>
+                    </div>
+                </form>           
+            </div>
+        </div>
+    </div>
+
+    <script src="//code.jquery.com/jquery.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    
+</body>
+</html>
